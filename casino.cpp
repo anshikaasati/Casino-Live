@@ -1,19 +1,3 @@
-/*=========================================================
-BACCARAT - Casino Number Game
-First project by Anshika Asati
-asatianshika14@gmail.com
-
-Player chooses between two sides either
-'banker' or 'player'. After drawing two cards the one
-who has the nearest number to 9 wins.
-
-Whenever sum overboards to 9, 1 card will be drawn
-from the deck. However if at the first two draw
-results a sum of 8 and 9, the dealer won't draw
-additional card anymore.
-
-===========================================================*/
-
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -32,8 +16,7 @@ int declareWinner(int winner, int decision, int bet); //checks if user win or lo
 
 
 int main(){
-
-    system ("Color 2F"); //CLI color changer
+    
     srand(time(NULL)); //random number initialization
 
     //variable declaration
@@ -43,17 +26,17 @@ int main(){
     bool logic = true;
     int money = 10000;
 
-    std::cout << "==============================" << std::endl;
+    std::cout << "--------------------------------" << std::endl;
     std::cout << "To Start, please enter your card" << std::endl;
 
     //name input
     std::cout << "Enter your name: ";
     getline(std::cin, name);
 
-    std::cout << "\nGood evening, " << name << std::endl;
-    std::cout << "==============================\n\n";
-    std::cout << "WELCOME TO VIRTUAL BACCARAT TABLE" << std::endl;
-    std::cout << "=================================" << std::endl;
+    std::cout << "\nHello, " << name << std::endl;
+    std::cout << "-----------------------\n\n";
+    std::cout << "WELCOME TO GAME CASINO" << std::endl;
+    std::cout << "-----------------------" << std::endl;
 
     do{ //main do-while loop
 
@@ -77,9 +60,9 @@ int main(){
 
 
         //BANKER CARDS
-        std::cout << "\n==============================\n";
+        std::cout << "\n----------------------------\n";
         std::cout << "      =" << " BANKER'S CARD  " << "=\n";
-        std::cout << "==============================\n";
+        std::cout << "------------------------------\n";
 
         //Random card generator
         struct Number banker;
@@ -106,9 +89,9 @@ int main(){
 
         //PLAYER CARDS
         std::cout << "\n";
-        std::cout << "==============================\n";
+        std::cout << "------------------------------\n";
         std::cout << "      =" << " PLAYER'S CARD" << "  =\n";
-        std::cout << "==============================\n";
+        std::cout << "------------------------------\n";
 
         //random number generator for 2 cards
         struct Number player;
@@ -202,7 +185,7 @@ int winnerFunction(int bankerCard, int playerCard){
     //function to determine nearest number to 9
     //returns 1,2,3 depending on condiiton met
 
-    std::cout << "\n==================================\n";
+    std::cout << "\n----------------------------------\n";
     if(bankerCard > playerCard){
 
         std::cout << "\nBANKER WIN, ";
@@ -238,4 +221,5 @@ int declareWinner(int winner, int decision, int bet){
     }
 
 }
+
 
